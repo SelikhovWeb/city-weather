@@ -20,45 +20,46 @@ import cloudly from "../../images/Cloudly.jpg";
 import rainy from "../../images/Rainy.jpg";
 import { Link } from "react-router-dom";
 
+const dateBuilder = (d) => {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let hour = d.getHours();
+  let minute = d.getMinutes();
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${hour}:${
+    (minute < 10 ? "0" : "") + minute
+  } ${day} ${date} ${month} ${year}`;
+};
 
 function CityCard(props) {
   const dispatch = useDispatch();
 
-  const dateBuider = (d) => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    let days = [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ];
-    let hour = d.getHours();
-    let minute = d.getMinutes();
-    let day = days[d.getDay()];
-    let date = d.getDate();
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-
-    return `${hour}:${
-      (minute < 10 ? "0" : "") + minute
-    } ${day} ${date} ${month} ${year}`;
-  };
+  
 
   const handleUpdate = (city) => {
     dispatch(fetchWeatherForCity(city));
@@ -87,7 +88,7 @@ function CityCard(props) {
               {props.city}, {props.country}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary" component="p">
-              Actual on {dateBuider(new Date(props.time * 1000))}
+              Actual on {dateBuilder(new Date(props.time * 1000))}
             </Typography>
             <Typography variant="h4" color="textSecondary" component="p">
               {`${Math.round(props.temp)}°c`}
