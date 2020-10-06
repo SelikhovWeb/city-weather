@@ -44,8 +44,7 @@ function ForecastPage(props) {
     <Bar
       data={{
         labels: cityForecast.forecast.map((el) => {
-          
-          return [el.date, el.description] ;
+          return [el.date, el.description];
         }),
         datasets: [
           {
@@ -79,7 +78,7 @@ function ForecastPage(props) {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Forecast</h1>
+      <h1>Daily Forecast</h1>
       <div className={styles.chartBox}>{barChart}</div>
     </div>
   );
