@@ -1,68 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Follow these steps to run the project in your computer locally
 
-In the project directory, you can run:
+1.Download the latest LTS-version Node.js;
 
-### `npm start`
+2.Write 'node -v' in the console and be sure that you install the latest version;
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3.Write 'npm -v' in the console and be sure that you install the latest version of npm;
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+4.Download and install Git, if it's not installed in your computer yet;
 
-### `npm test`
+5.Input 'git --version' to check the version of Git, it must be not less then 2.18.0;
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Clone and launch this project: 'git clone https://github.com/SelikhovWeb/city-weather.git';
 
-### `npm run build`
+7.Go to the project directory using 'cd city-weather';
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8.Install the project ependencies using 'npm install' command;
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+9.Now execute 'npm start' in the console;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+10. Open the browser and open http://localhost:3000 page;
 
-### `npm run eject`
+### Project description
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is a SPA for checking current weather and daily forecast in cities around the world. You can choose the weather in which cities to monitor, using the add and remove functionality. Also you can manually update weather in a certain city. The data is storing in the LocalStorage so your data will be saved if you refresh the page. The project uses such technologies as React, Redux, React-router, Material.ui, Chart.js, axios.
